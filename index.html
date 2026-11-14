@@ -3,31 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SMJ Profaith Printing Services offers fast, reliable, and affordable printing solutions in Muntinlupa, Philippines.">
+
+  <meta name="description" content="SMJ Profaith Printing Services offers fast, reliable, and affordable printing solutions for walk-in customers and regular clients in Muntinlupa, Philippines.">
+
   <title>Home | SMJ Profaith Printing Services</title>
 
-  <!-- Google Fonts: Playfair Display (headings), Roboto & Montserrat (interface) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- CSS Files -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/pages.css">
   <link rel="stylesheet" href="css/services.css">
   <link rel="stylesheet" href="css/home.css">
 </head>
+
 <body>
 
-  <!-- ===== HEADER / NAVIGATION ===== -->
+  <!-- HEADER / NAVIGATION -->
   <header class="site-header">
     <div class="container nav-wrap">
+
       <a href="index.html" class="brand">
         <img src="assets/logo.png" alt="SMJ Profaith Printing Services logo" width="44" height="44">
         <span>SMJ Profaith Printing Services</span>
       </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
@@ -40,220 +51,465 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
+
   <main>
 
-    <!-- ===== HERO / COMPANY INTRODUCTION ===== -->
+    <!-- HERO / COMPANY INTRODUCTION -->
     <section class="hero">
       <div class="container hero-grid">
+
         <div class="hero-text reveal">
-          <h1>Welcome to <span class="accent">SMJ Profaith</span> Printing Services</h1>
-          <p class="tagline"><em>Your Ideas. Our Prints. Your Impression.</em></p>
-          <p>
-            SMJ Profaith Printing Services is a local printing business that delivers fast,
-            reliable, and affordable printing solutions for walk-in customers and regular clients.
+
+          <h1>
+            Welcome to
+            <span class="accent">SMJ Profaith</span>
+            Printing Services
+          </h1>
+
+          <p class="tagline">
+            <em>Your Ideas. Our Prints. Your Impression.</em>
           </p>
+
+          <p>
+            SMJ Profaith Printing Services is a local printing business
+            that provides fast, reliable, and affordable printing solutions.
+            We cater to walk-in customers and regular clients who need
+            document printing, reproduction, and other related print materials.
+          </p>
+
           <div class="btn-group">
-            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-            <a href="services.html" class="btn btn-outline">Browse Services</a>
+            <a href="contact.html" class="btn btn-primary">
+              Get in Touch
+            </a>
+
+            <a href="services.html" class="btn btn-outline">
+              Browse Services
+            </a>
           </div>
+
         </div>
+
 
         <div class="hero-card reveal">
-          <img src="assets/logo.png" alt="SMJ Profaith Printing Services logo" width="320" height="320">
+          <img
+            src="assets/logo.png"
+            alt="SMJ Profaith Printing Services company logo"
+            width="320"
+            height="320">
         </div>
 
-          <div class="featured-works">
-          <h3>Featured Printing Works</h3>
 
-          <div class="featured-works-grid">
-            <div class="work-card">
-              <img src="assets/InvitationCards.jpg" alt="Custom Invitation Cards">
-              <p>Custom Invitation Cards</p>
-            </div>
-            
-            <div class="work-card">
-              <img src="assets/LogoCards.jpg" alt="Custom Logo Cards">
-              <p>Custom Logo Cards</p>
-            </div>
-          </div>
+        <!-- FEATURED PRINTING WORKS -->
+<div class="featured-works">
+
+    <h3>Featured Printing Works</h3>
+
+    <p>
+        Explore some of the printing products offered by
+        SMJ Profaith Printing Services.
+    </p>
+
+    <div class="featured-works-grid">
+
+        <div class="work-card">
+            <button
+                class="featured-image-button"
+                type="button"
+                aria-label="View Custom Invitation Cards image">
+
+                <img
+                    src="assets/InvitationCards.jpg"
+                    alt="Custom Invitation Cards">
+
+                <span class="zoom-label">Click to enlarge</span>
+            </button>
+
+            <p>Custom Invitation Cards</p>
         </div>
-      </div>
 
+        <div class="work-card">
+            <button
+                class="featured-image-button"
+                type="button"
+                aria-label="View Custom Logo Cards image">
+
+                <img
+                    src="assets/LogoCards.jpg"
+                    alt="Custom Logo Cards">
+
+                <span class="zoom-label">Click to enlarge</span>
+            </button>
+
+            <p>Custom Logo Cards</p>
+        </div>
+
+    </div>
+</div>
     </section>
 
-    <!-- ===== SERVICES AT A GLANCE ===== -->
+
+    <!-- SERVICES AT A GLANCE -->
     <section class="section section-pink">
       <div class="container">
-        <h2 class="section-title">Our Services at a Glance</h2>
+
+        <h2 class="section-title">
+          Our Services at a Glance
+        </h2>
+
+        <p class="section-intro">
+          We provide printing solutions designed to meet the needs
+          of our walk-in customers and regular clients.
+        </p>
 
         <div class="card-grid">
+
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">🖨️</div>
+
             <h3>Quality Printing</h3>
-            <p>Sharp prints that make your work stand out.</p>
+
+            <p>
+              We maintain quality and accuracy in every printing job
+              and transaction.
+            </p>
           </article>
+
 
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">⚡</div>
-            <h3>Fast Turnaround</h3>
-            <p>Quick service without compromising quality.</p>
+
+            <h3>Reliable Service</h3>
+
+            <p>
+              We aim to provide fast, reliable, and affordable
+              printing services to our customers.
+            </p>
           </article>
+
 
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">📦</div>
-            <h3>Convenient Service</h3>
-            <p>Simple printing, from inquiry to finished product.</p>
+
+            <h3>Customer Service</h3>
+
+            <p>
+              We value excellent and consistent service
+              to build long-term customer relationships.
+            </p>
           </article>
+
         </div>
 
+
+        <!-- PRICE LISTS -->
         <div class="rate-list-heading">
+
           <h3>Browse Our Price Lists</h3>
-          <p>Explore prices and options for our popular printing services.</p>
+
+          <p>
+            View available printing options and price list references
+            for selected products and services.
+          </p>
+
         </div>
+
 
         <div class="rate-card-grid">
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/sintra-board.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Sintra Board price list">
-              <img src="assets/service-rates/sintra-board.jpg" alt="Sintra Board price list with size and thickness options" width="374" height="561" loading="lazy">
+            <a
+              href="assets/service-rates/sintra-board.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the full Sintra Board price list">
+
+              <img
+                src="assets/service-rates/sintra-board.jpg"
+                alt="Sintra Board price list"
+                width="374"
+                height="561"
+                loading="lazy">
             </a>
+
             <h4>Sintra Board</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
 
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/tote-bag.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Tote Bag price list">
-              <img src="assets/service-rates/tote-bag.jpg" alt="Tote Bag price list for white and black canvas bags" width="375" height="560" loading="lazy">
+            <a
+              href="assets/service-rates/tote-bag.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the full Tote Bag price list">
+
+              <img
+                src="assets/service-rates/tote-bag.jpg"
+                alt="Tote Bag price list"
+                width="375"
+                height="560"
+                loading="lazy">
             </a>
+
             <h4>Tote Bag</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
 
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/ring-bind-document-print.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Ring Bind and Document Print price list">
-              <img src="assets/service-rates/ring-bind-document-print.jpg" alt="Ring binding and document printing price list" width="377" height="560" loading="lazy">
+            <a
+              href="assets/service-rates/ring-bind-document-print.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the Ring Bind and Document Print price list">
+
+              <img
+                src="assets/service-rates/ring-bind-document-print.jpg"
+                alt="Ring binding and document printing price list"
+                width="377"
+                height="560"
+                loading="lazy">
             </a>
+
             <h4>Ring Bind &amp; Document Print</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
 
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/ref-magnet.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Ref Magnet price list">
-              <img src="assets/service-rates/ref-magnet.jpg" alt="Ref Magnet price list with ATM card and square badge options" width="377" height="562" loading="lazy">
+            <a
+              href="assets/service-rates/ref-magnet.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the Ref Magnet price list">
+
+              <img
+                src="assets/service-rates/ref-magnet.jpg"
+                alt="Ref Magnet price list"
+                width="377"
+                height="562"
+                loading="lazy">
             </a>
+
             <h4>Ref Magnet</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
 
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/business-card.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Business Card price list">
-              <img src="assets/service-rates/business-card.jpg" alt="Business Card price list for one-sided and double-sided printing" width="377" height="562" loading="lazy">
+            <a
+              href="assets/service-rates/business-card.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the Business Card price list">
+
+              <img
+                src="assets/service-rates/business-card.jpg"
+                alt="Business Card price list"
+                width="377"
+                height="562"
+                loading="lazy">
             </a>
+
             <h4>Business Card</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
 
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/invitation.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Invitation price list">
-              <img src="assets/service-rates/invitation.jpg" alt="Invitation price list with card sizes and add-on options" width="376" height="561" loading="lazy">
+            <a
+              href="assets/service-rates/invitation.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the Invitation price list">
+
+              <img
+                src="assets/service-rates/invitation.jpg"
+                alt="Invitation price list"
+                width="376"
+                height="561"
+                loading="lazy">
             </a>
+
             <h4>Invitation</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
 
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/tag-card.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Tag and Card price list">
-              <img src="assets/service-rates/tag-card.jpg" alt="Tag and Card price list with quantity guides" width="376" height="560" loading="lazy">
+            <a
+              href="assets/service-rates/tag-card.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the Tag and Card price list">
+
+              <img
+                src="assets/service-rates/tag-card.jpg"
+                alt="Tag and Card price list"
+                width="376"
+                height="560"
+                loading="lazy">
             </a>
+
             <h4>Tag / Card</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
 
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/sticker.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Sticker price list">
-              <img src="assets/service-rates/sticker.jpg" alt="Sticker price list with material and size options" width="375" height="562" loading="lazy">
+            <a
+              href="assets/service-rates/sticker.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the Sticker price list">
+
+              <img
+                src="assets/service-rates/sticker.jpg"
+                alt="Sticker price list"
+                width="375"
+                height="562"
+                loading="lazy">
             </a>
+
             <h4>Sticker</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
 
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/tarpaulin.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Tarpaulin price list">
-              <img src="assets/service-rates/tarpaulin.jpg" alt="Tarpaulin price list with personal, business, and backdrop sizes" width="375" height="561" loading="lazy">
+            <a
+              href="assets/service-rates/tarpaulin.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the Tarpaulin price list">
+
+              <img
+                src="assets/service-rates/tarpaulin.jpg"
+                alt="Tarpaulin price list"
+                width="375"
+                height="561"
+                loading="lazy">
             </a>
+
             <h4>Tarpaulin</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
 
+
           <article class="rate-card reveal">
-            <a href="assets/service-rates/photo-print.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full Photo Print price list">
-              <img src="assets/service-rates/photo-print.jpg" alt="Photo Print price list for glossy and satin or woven finishes" width="377" height="562" loading="lazy">
+            <a
+              href="assets/service-rates/photo-print.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the Photo Print price list">
+
+              <img
+                src="assets/service-rates/photo-print.jpg"
+                alt="Photo Print price list"
+                width="377"
+                height="562"
+                loading="lazy">
             </a>
+
             <h4>Photo Print</h4>
             <p class="rate-card-link-label">View full price list ↗</p>
           </article>
+
         </div>
+
       </div>
     </section>
 
-    <!-- ===== WHY CHOOSE US ===== -->
+
+    <!-- WHY CHOOSE US -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Why Choose Us?</h2>
+
+        <h2 class="section-title">
+          Why Choose Us?
+        </h2>
 
         <div class="card-grid">
+
           <article class="card reveal">
             <h3>Quality You Can Trust</h3>
-            <p>We maintain high standards of quality and accuracy in every printing job.</p>
+
+            <p>
+              We maintain high standards of quality and accuracy
+              in every printing job and transaction.
+            </p>
           </article>
+
 
           <article class="card reveal">
             <h3>Service That Cares</h3>
-            <p>Excellent, consistent service that builds long-term relationships with our customers.</p>
+
+            <p>
+              We provide excellent and consistent service
+              while building long-term relationships with customers.
+            </p>
           </article>
+
 
           <article class="card reveal">
-            <h3>Printing Made Easy</h3>
-            <p>A simple process, from choosing your service to claiming your finished order.</p>
+            <h3>Affordable Printing Solutions</h3>
+
+            <p>
+              We aim to provide affordable printing services
+              that meet customer needs and expectations.
+            </p>
           </article>
+
         </div>
 
-        <ul class="chip-list" aria-label="Highlights">
-          <li>High-Res Output</li>
-          <li>Crisp Output</li>
-          <li>Consistent Quality</li>
-          <li>Full Selection</li>
-          <li>Fast Prints</li>
-          <li>Budget-Friendly</li>
-        </ul>
       </div>
     </section>
 
 
-<!-- ===== PRODUCTS HIGHLIGHT CTA ===== -->
+    <!-- PRODUCTS AND SERVICES CALL TO ACTION -->
     <section class="section section-pink cta">
       <div class="container">
-        <h2 class="section-title">Ready to Print Something Great?</h2>
-        <p>Explore our full range of printing products and see how easy it is to place an order.</p>
-        <a href="services.html" class="btn btn-primary">View Products &amp; Services</a>
+
+        <h2 class="section-title">
+          Ready to Print Something Great?
+        </h2>
+
+        <p>
+          Explore the products and services offered by
+          SMJ Profaith Printing Services.
+        </p>
+
+        <a href="services.html" class="btn btn-primary">
+          View Products &amp; Services
+        </a>
+
       </div>
     </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+
+  <!-- FOOTER -->
   <footer class="site-footer">
+
     <div class="container footer-grid">
+
       <div>
         <h3>SMJ Profaith Printing Services</h3>
+
         <p>Your Ideas. Our Prints. Your Impression.</p>
       </div>
+
+
       <div>
         <h3>Quick Links</h3>
+
         <ul>
-          <li><a href="index.html" >Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Products &amp; Services</a></li>
           <li><a href="blog.html">Blog / Updates</a></li>
@@ -261,27 +517,47 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
+
+
       <div>
         <h3>Follow Us</h3>
+
         <p>
-    Facebook:
-    <a href="https://www.facebook.com/share/1EsnK7q3xP/" target="_blank" rel="noopener noreferrer">
-      SMJ Profaith Printing Services
-    </a>
-  </p>
-  <p>
-    Instagram:
-    <a href="https://www.instagram.com/smj_profaith/" target="_blank" rel="noopener noreferrer">
-      @smj_profaith
-    </a>
-  </p>
-</div>
+          Facebook:
+          <a
+            href="https://www.facebook.com/share/1EsnK7q3xP/"
+            target="_blank"
+            rel="noopener noreferrer">
+            SMJ Profaith Printing Services
+          </a>
+        </p>
+
+        <p>
+          Instagram:
+          <a
+            href="https://www.instagram.com/smj_profaith/"
+            target="_blank"
+            rel="noopener noreferrer">
+            @smj_profaith
+          </a>
+        </p>
+      </div>
+
     </div>
+
+
     <div class="footer-bottom">
-      <p>&copy; <span id="year">2026</span> SMJ Profaith Printing Services. All rights reserved.</p>
+      <p>
+        &copy; <span id="year">2026</span>
+        SMJ Profaith Printing Services. All rights reserved.
+      </p>
     </div>
+
   </footer>
 
+
+  <!-- JavaScript -->
   <script src="script.js"></script>
+
 </body>
 </html>

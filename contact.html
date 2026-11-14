@@ -1,199 +1,810 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact SMJ Profaith Printing Services. Send an inquiry, find our location, or connect with us on social media.">
-  <title>Contact Us | SMJ Profaith Printing Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Contact SMJ Profaith Printing Services in Tunasan, Muntinlupa. Send an inquiry, find our location, or connect with us on social media.">
 
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="css/services.css">
-  <link rel="stylesheet" href="css/home.css">
+    <title>Contact Us | SMJ Profaith Printing Services</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- EMAIL NOTIFICATION STYLES -->
+    <style>
+        .email-toast {
+            position: fixed;
+            top: 95px;
+            right: 25px;
+
+            z-index: 10001;
+
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+
+            width: min(390px, calc(100vw - 30px));
+
+            padding: 18px;
+
+            background: #ffffff;
+
+            border: 1px solid #f1c3d1;
+            border-left: 5px solid #f25c7a;
+            border-radius: 12px;
+
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transform: translateX(30px);
+
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s ease;
+
+            pointer-events: none;
+        }
+
+        .email-toast.show {
+            opacity: 1;
+            visibility: visible;
+
+            transform: translateX(0);
+
+            pointer-events: auto;
+        }
+
+        .email-toast-icon {
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 42px;
+            height: 42px;
+
+            background: #fde4ec;
+            color: #d43f60;
+
+            border-radius: 50%;
+
+            font-size: 20px;
+        }
+
+        .email-toast-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .email-toast-content h3 {
+            margin: 0 0 5px;
+
+            color: #d43f60;
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .email-toast-content p {
+            margin: 0;
+
+            color: #4a4a4a;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.5;
+
+            overflow-wrap: anywhere;
+        }
+
+        .email-toast-close {
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 27px;
+            height: 27px;
+
+            padding: 0;
+
+            background: #fde4ec;
+            color: #d43f60;
+
+            border: none;
+            border-radius: 50%;
+
+            font-size: 18px;
+            line-height: 1;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .email-toast-close:hover {
+            background: #f8c5d4;
+            transform: scale(1.08);
+        }
+
+        .email-toast-close:focus-visible {
+            outline: 2px solid #d43f60;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 600px) {
+            .email-toast {
+                top: 85px;
+                right: 15px;
+
+                width: calc(100vw - 30px);
+
+                padding: 15px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .email-toast,
+            .email-toast-close {
+                transition: none;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
 
-  <!-- ===== HEADER / NAVIGATION ===== -->
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="index.html" class="brand">
-        <img src="assets/logo.png" alt="SMJ Profaith Printing Services logo" width="44" height="44">
-        <span>SMJ Profaith Printing Services</span>
-      </a>
+    <!-- HEADER / NAVIGATION -->
+    <header class="site-header">
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
+        <div class="container nav-wrap">
 
-      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Products &amp; Services</a></li>
-          <li><a href="blog.html">Blog / Updates</a></li>
-          <li><a href="faqs.html">FAQs</a></li>
-          <li><a href="contact.html" aria-current="page">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+            <a href="index.html" class="brand">
 
-  <main>
+                <img
+                    src="assets/logo.png"
+                    alt="SMJ Profaith Printing Services logo"
+                    width="44"
+                    height="44">
 
-    <!-- ===== PAGE HEADER ===== -->
-    <section class="page-banner">
-      <div class="container">
-        <h1>Contact Us</h1>
-        <p>Have a printing project in mind? We'd love to hear from you. Reach out to inquire about our services, request a quote, or simply ask us a question.</p>
-      </div>
-    </section>
+                <span>SMJ Profaith Printing Services</span>
 
-    <!-- ===== INQUIRY FORM + CONTACT INFO ===== -->
-    <section class="section">
-      <div class="container contact-grid">
+            </a>
 
-        <!-- A. Inquiry Form -->
-        <div class="form-wrap reveal">
-          <h2 class="section-title left">Inquiry Form</h2>
+            <button
+                class="nav-toggle"
+                aria-expanded="false"
+                aria-controls="site-nav"
+                aria-label="Toggle navigation menu">
 
-          <!-- novalidate: validation is handled by script.js for consistent messages -->
-          <form id="inquiry-form" class="inquiry-form" novalidate>
+                <span></span>
+                <span></span>
+                <span></span>
 
-            <div class="form-group">
-              <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
-              <input type="text" id="name" name="name" autocomplete="name" required>
-              <small class="error-msg" id="name-error" role="alert"></small>
-            </div>
+            </button>
 
-            <div class="form-group">
-              <label for="email">Email address <span class="required" aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" autocomplete="email" required>
-              <small class="error-msg" id="email-error" role="alert"></small>
-            </div>
+            <nav id="site-nav" class="site-nav" aria-label="Main navigation">
 
-            <div class="form-group">
-              <label for="phone">Phone number</label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g., 09XX XXX XXXX">
-              <small class="error-msg" id="phone-error" role="alert"></small>
-            </div>
+                <ul>
 
-            <div class="form-group">
-              <label for="service">Service needed <span class="required" aria-hidden="true">*</span></label>
-              <select id="service" name="service" required>
-                <option value="">-- Select a service --</option>
-                <option value="Document Printing">Document Printing</option>
-                <option value="Reproduction">Reproduction</option>
-                <option value="Tote Bag">Tote Bag</option>
-                <option value="Invitation">Invitation</option>
-                <option value="Sticker">Sticker</option>
-                <option value="Event Backdrop">Event Backdrop</option>
-                <option value="Photo Calendar">Photo Calendar</option>
-                <option value="Sintra Board">Sintra Board</option>
-                <option value="Ref Magnet">Ref Magnet</option>
-                <option value="Other">Other</option>
-              </select>
-              <small class="error-msg" id="service-error" role="alert"></small>
-            </div>
+                    <li><a href="index.html">Home</a></li>
 
-            <div class="form-group">
-              <label for="details">Project details <span class="required" aria-hidden="true">*</span></label>
-              <textarea id="details" name="details" rows="5" placeholder="Quantity, size, deadline, and any other details..." required></textarea>
-              <small class="error-msg" id="details-error" role="alert"></small>
-            </div>
+                    <li><a href="about.html">About Us</a></li>
 
-            <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            <p class="form-note">Your personal information will not be shared. We will never ask for passwords.</p>
-          </form>
+                    <li><a href="services.html">Products &amp; Services</a></li>
+
+                    <li><a href="blog.html">Blog / Updates</a></li>
+
+                    <li><a href="faqs.html">FAQs</a></li>
+
+                    <li>
+                        <a href="contact.html" aria-current="page">Contact Us</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
         </div>
 
-        <!-- B, C, D. Contact information, social links, location -->
-        <aside class="contact-info reveal">
-          <h2 class="section-title left">Contact Us</h2>
+    </header>
 
-          <div class="info-block">
-            <h3>Head Office</h3>
-            <p>Tunasan, Muntinlupa<br>Philippines</p>
-          </div>
 
-          <div class="info-block">
-            <h3>Phone</h3>
-            <p><a href="tel:+639753329257">+63 975 332 9257</a></p>
-          </div>
+    <main>
 
-          <div class="info-block">
-            <h3>Email</h3>
-            <p><a href="mailto:profaithprinting@gmail.com">profaithprinting@gmail.com</a></p>
-          </div>
+        <!-- PAGE HEADER -->
+        <section class="page-banner">
 
-          <div class="info-block">
-            <h3>Social Media</h3>
-            <ul class="social-links">
-              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook: SMJ Profaith Printing Services</a></li>
-              <li><a href="https://www.instagram.com/smj_profaith" target="_blank" rel="noopener noreferrer">Instagram: @smj_profaith</a></li>
-            </ul>
-          </div>
-        </aside>
-      </div>
+            <div class="container">
 
-      <!-- Location / Map -->
-      <div class="container">
-        <h2 class="section-title">Find Us</h2>
-        <div class="map-wrap reveal">
-          <iframe
-            title="Map showing the location of SMJ Profaith Printing Services in Muntinlupa"
-            src="https://www.google.com/maps?q=SMJ+Profaith+Printing+Services+Muntinlupa&output=embed"
-            width="100%" height="380" style="border:0;" allowfullscreen loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h1>Contact Us</h1>
+
+                <p>
+                    Have a printing project in mind?
+                    Get in touch with SMJ Profaith Printing Services
+                    to ask about our products, request a quotation,
+                    or send us your questions and concerns.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- INQUIRY FORM AND CONTACT INFORMATION -->
+        <section class="section">
+
+            <div class="container contact-grid">
+
+                <!-- INQUIRY FORM -->
+                <div class="form-wrap reveal">
+
+                    <h2 class="section-title left">
+                        Inquiry Form
+                    </h2>
+
+                    <p>
+                        Please complete the form below and provide
+                        the necessary details about your printing project.
+                    </p>
+
+                    <form
+                        id="inquiry-form"
+                        class="inquiry-form"
+                        novalidate>
+
+                        <!-- NAME -->
+                        <div class="form-group">
+
+                            <label for="name">
+                                Name
+                                <span class="required" aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                                required>
+
+                            <small
+                                class="error-msg"
+                                id="name-error"
+                                role="alert">
+                            </small>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                                <span class="required" aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required>
+
+                            <small
+                                class="error-msg"
+                                id="email-error"
+                                role="alert">
+                            </small>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                autocomplete="tel"
+                                placeholder="e.g., 09XX XXX XXXX">
+
+                            <small
+                                class="error-msg"
+                                id="phone-error"
+                                role="alert">
+                            </small>
+
+                        </div>
+
+
+                        <!-- SERVICE -->
+                        <div class="form-group">
+
+                            <label for="service">
+                                Service Needed
+                                <span class="required" aria-hidden="true">*</span>
+                            </label>
+
+                            <select
+                                id="service"
+                                name="service"
+                                required>
+
+                                <option value="">-- Select a service --</option>
+
+                                <option value="Document Printing">
+                                    Document Printing
+                                </option>
+
+                                <option value="Reproduction">
+                                    Reproduction
+                                </option>
+
+                                <option value="Tote Bag">
+                                    Tote Bag
+                                </option>
+
+                                <option value="Invitation">
+                                    Invitation
+                                </option>
+
+                                <option value="Sticker">
+                                    Sticker
+                                </option>
+
+                                <option value="Sintra Board">
+                                    Sintra Board
+                                </option>
+
+                                <option value="Event Backdrop">
+                                    Event Backdrop
+                                </option>
+
+                                <option value="Photo Calendar">
+                                    Photo Calendar
+                                </option>
+
+                                <option value="Ref Magnet">
+                                    Ref Magnet
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                            <small
+                                class="error-msg"
+                                id="service-error"
+                                role="alert">
+                            </small>
+
+                        </div>
+
+
+                        <!-- PROJECT DETAILS -->
+                        <div class="form-group">
+
+                            <label for="details">
+                                Project Details
+                                <span class="required" aria-hidden="true">*</span>
+                            </label>
+
+                            <textarea
+                                id="details"
+                                name="details"
+                                rows="5"
+                                placeholder="Please include quantity, size, preferred specifications, deadline, and other project details."
+                                required>
+                            </textarea>
+
+                            <small
+                                class="error-msg"
+                                id="details-error"
+                                role="alert">
+                            </small>
+
+                        </div>
+
+
+                        <!-- SUBMIT BUTTON -->
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-block">
+
+                            Submit Inquiry
+
+                        </button>
+
+
+                        <!-- FORM STATUS -->
+                        <p
+                            class="form-status"
+                            id="form-status"
+                            role="status"
+                            aria-live="polite">
+                        </p>
+
+
+                        <p class="form-note">
+                            Please provide accurate contact information
+                            so the business can respond to your inquiry.
+                        </p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- CONTACT INFORMATION -->
+                <aside class="contact-info reveal">
+
+                    <h2 class="section-title left">
+                        Contact Information
+                    </h2>
+
+
+                    <!-- ADDRESS -->
+                    <div class="info-block">
+
+                        <h3>Head Office</h3>
+
+                        <p>
+                            Tunasan, Muntinlupa<br>
+                            Philippines
+                        </p>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+                    <div class="info-block">
+
+                        <h3>Phone Number</h3>
+
+                        <p>
+                            <a href="tel:+639753329257">
+                                +63 975 332 9257
+                            </a>
+                        </p>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="info-block">
+
+                        <h3>Email Address</h3>
+
+                        <p>
+                            <a href="mailto:profaithprinting@gmail.com">
+                                profaithprinting@gmail.com
+                            </a>
+                        </p>
+
+                    </div>
+
+
+                    <!-- SOCIAL MEDIA -->
+                    <div class="info-block">
+
+                        <h3>Social Media</h3>
+
+                        <ul class="social-links">
+
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/share/1EsnK7q3xP/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    Facebook: SMJ Profaith Printing Services
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="https://www.instagram.com/smj_profaith/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    Instagram: @smj_profaith
+
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+            <!-- LOCATION / MAP -->
+            <div class="container">
+
+                <h2 class="section-title">
+                    Find Our Location
+                </h2>
+
+                <p class="section-intro">
+                    Visit our location in Tunasan, Muntinlupa,
+                    or contact us for additional directions.
+                </p>
+
+                <div class="map-wrap reveal">
+
+                    <iframe
+                        title="Map showing SMJ Profaith Printing Services in Tunasan, Muntinlupa"
+                        src="https://www.google.com/maps?q=SMJ+Profaith+Printing+Services+Muntinlupa&output=embed"
+                        width="100%"
+                        height="380"
+                        style="border:0;"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT CALL TO ACTION -->
+        <section class="section section-pink">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    We Would Love to Hear From You!
+                </h2>
+
+                <p>
+                    For questions, concerns, and printing inquiries,
+                    feel free to contact SMJ Profaith Printing Services.
+                </p>
+
+                <a
+                    href="mailto:profaithprinting@gmail.com"
+                    class="btn btn-primary"
+                    id="send-email-button">
+
+                    Send an Email
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EMAIL NOTIFICATION -->
+    <div
+        class="email-toast"
+        id="email-toast"
+        role="status"
+        aria-live="polite"
+        aria-hidden="true">
+
+        <div class="email-toast-icon" aria-hidden="true">
+            ✉
         </div>
-      </div>
-    </section>
 
-  </main>
+        <div class="email-toast-content">
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>SMJ Profaith Printing Services</h3>
-        <p>Your Ideas. Our Prints. Your Impression.</p>
-      </div>
-      <div>
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Products &amp; Services</a></li>
-          <li><a href="blog.html">Blog / Updates</a></li>
-          <li><a href="faqs.html">FAQs</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div>
-  <h3>Follow Us</h3>
-  <p>
-    Facebook:
-    <a href="https://www.facebook.com/share/1EsnK7q3xP/" target="_blank" rel="noopener noreferrer">
-      SMJ Profaith Printing Services
-    </a>
-  </p>
-  <p>
-    Instagram:
-    <a href="https://www.instagram.com/smj_profaith/" target="_blank" rel="noopener noreferrer">
-      @smj_profaith
-    </a>
-  </p>
-</div>
+            <h3>Email Application</h3>
+
+            <p>
+                Opening your email application.
+                You can send your message to
+                profaithprinting@gmail.com.
+            </p>
+
+        </div>
+
+        <button
+            type="button"
+            class="email-toast-close"
+            id="email-toast-close"
+            aria-label="Close notification">
+
+            &times;
+
+        </button>
+
     </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year">2026</span> SMJ Profaith Printing Services. All rights reserved.</p>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h3>SMJ Profaith Printing Services</h3>
+
+                <p>
+                    Your Ideas. Our Prints. Your Impression.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="services.html">Products &amp; Services</a></li>
+
+                    <li><a href="blog.html">Blog / Updates</a></li>
+
+                    <li><a href="faqs.html">FAQs</a></li>
+
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Follow Us</h3>
+
+                <p>
+                    Facebook:
+
+                    <a
+                        href="https://www.facebook.com/share/1EsnK7q3xP/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        SMJ Profaith Printing Services
+
+                    </a>
+
+                </p>
+
+
+                <p>
+                    Instagram:
+
+                    <a
+                        href="https://www.instagram.com/smj_profaith/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        @smj_profaith
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="year">2026</span>
+                SMJ Profaith Printing Services. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- EXISTING JAVASCRIPT -->
+    <script src="script.js"></script>
+
+
+    <!-- EMAIL NOTIFICATION JAVASCRIPT -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const sendEmailButton =
+                document.getElementById("send-email-button");
+
+            const emailToast =
+                document.getElementById("email-toast");
+
+            const closeToastButton =
+                document.getElementById("email-toast-close");
+
+            if (!sendEmailButton || !emailToast || !closeToastButton) {
+                return;
+            }
+
+            let toastTimer;
+
+            function showEmailNotification() {
+
+                emailToast.classList.add("show");
+
+                emailToast.setAttribute("aria-hidden", "false");
+
+                clearTimeout(toastTimer);
+
+                toastTimer = setTimeout(() => {
+                    hideEmailNotification();
+                }, 5000);
+
+            }
+
+            function hideEmailNotification() {
+
+                emailToast.classList.remove("show");
+
+                emailToast.setAttribute("aria-hidden", "true");
+
+                clearTimeout(toastTimer);
+
+            }
+
+            sendEmailButton.addEventListener("click", () => {
+
+                showEmailNotification();
+
+                // The original mailto link remains active.
+                // The browser will continue opening the user's email application.
+
+            });
+
+            closeToastButton.addEventListener(
+                "click",
+                hideEmailNotification
+            );
+
+        });
+
+    </script>
+
 </body>
+
 </html>
