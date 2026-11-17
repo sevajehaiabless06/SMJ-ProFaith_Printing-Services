@@ -1,99 +1,138 @@
 # SMJ Profaith Printing Services – Company Website
 
-A responsive, multi-page website for **SMJ Profaith Printing Services**, a local printing business that offers fast, reliable, and affordable printing solutions.
+## Project Overview
 
-**Live site (GitHub Pages):** https://yourusername.github.io/SMJ_Profaith_Printing_Services
+This website was developed by BSIS 3C students as part of their Web Development course. It presents the business information, products, services, updates, and contact details of SMJ Profaith Printing Services, a local printing business in Muntinlupa.
 
-> Replace `yourusername` with your GitHub username after enabling GitHub Pages.
+## Purpose
 
----
+To provide SMJ Profaith Printing Services with an informational website where customers can easily view the business background, available products and services, announcements, frequently asked questions, and contact information. The website also serves as an additional platform that complements the business's existing communication channels.
 
-## Pages
+## Team Members & Roles
 
-| File          | Page                 | Contents                                                              |
-| ------------- | -------------------- | --------------------------------------------------------------------- |
-| `index.html`  | Home                 | Company introduction, services at a glance, why choose us, highlights |
-| `about.html`  | About Us             | Company background, mission and vision, objectives                    |
-| `services.html` | Products & Services | Printing products, service highlights, four-step order process        |
-| `contact.html` | Contact Us          | Inquiry form, contact details, social media links, location map       |
-
-## Features
-
-- Responsive layout that works on desktop, tablet, and mobile
-- Hamburger navigation menu on small screens
-- Inquiry form with client-side validation (required fields, email format, Philippine mobile number format)
-- Scroll-reveal animations (disabled automatically for users who prefer reduced motion)
-- Semantic HTML5 elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`)
-- Embedded Google Map of the shop's location
-
-## Design
-
-- **Color scheme:** pink, white, and black, taken from the company logo
-- **Typography:** Playfair Display and Times New Roman for headings; Roboto and Montserrat for navigation, labels, and buttons
-- **Design principles:** contrast, repetition, alignment, and proximity
-
-## Project Structure
-
-```
-SMJ_Profaith_Printing_Services/
-├── index.html        Home page
-├── about.html        About Us page
-├── services.html     Products & Services page
-├── contact.html      Contact Us page
-├── css/
-│   ├── base.css      Shared layout, typography, components, and responsive rules
-│   ├── pages.css     Blog, FAQ, and shared page-specific components
-│   ├── services.css  Products & Services page styling
-│   └── home.css      Home page and price-list gallery styling
-├── script.js         Main JavaScript (menu, animations, form validation)
-├── assets/
-│   ├── logo.png      Company logo
-│   ├── products/     Product photos shown on the services page
-│   └── service-rates/ Cropped price-list images shown on the home page
-├── README.md         Project overview and instructions
-└── .gitignore        Files Git should ignore
-```
-
-## Running Locally
-
-1. Open the folder in **Visual Studio Code**.
-2. Install the recommended extension **Live Server**.
-3. Right-click `index.html` and choose **Open with Live Server**.
-
-No build tools or installation are needed. The site is plain HTML, CSS, and JavaScript.
-
-## Deployment (GitHub Pages)
-
-1. Push the repository to GitHub (branch `main`).
-2. Go to **Settings → Pages**.
-3. Under **Source**, choose the `main` branch and the `/ (root)` folder, then click **Save**.
-4. The site will be live at `https://yourusername.github.io/SMJ_Profaith_Printing_Services`.
+| Role | Name |
+|---|---|
+| Project Manager | Jehaia Bless D. Seva |
+| Designer | Jazmine B. Borja |
+| Content Writer | Mark Neo D. Mendoza |
+| Developer | Cecilio Emil J. Mendez |
+| Researcher | John Paul A. Bañez |
 
 ## Tools Used
 
-- HTML5
-- CSS3 (custom properties, Flexbox, Grid)
-- JavaScript (ES6)
-- Git and GitHub
+- HTML
+- CSS
+- JavaScript 
 - Visual Studio Code
+- Git and GitHub
+- GitHub Pages
 
-## Team
+## Site Structure
 
-| Role               | Name                       |
-| ------------------ | -------------------------- |
-| Project Manager    | Jehaia Bless D. Seva       |
-| Designer           | Jazmine B. Borja           |
-| Content Writer     | Mark Neo D. Mendoza        |
-| Developer          | Cecilio Emil J. Mendez     |
-| Researcher         | John Paul A. Bañez         |
+| File | Page | Contents |
+|---|---|---|
+| `index.html` | Home | Company introduction, services at a glance, reasons to choose the business, and highlights |
+| `about.html` | About Us | Company background, mission and vision, and objectives |
+| `services.html` | Products & Services | Printing products, service highlights, and four-step order process |
+| `blog.html` | Blog/Updates | Printing tips, promotions, and business announcements |
+| `faqs.html` | FAQs | Common customer questions and information about services, payment, and delivery or pickup |
+| `contact.html` | Contact Us | Inquiry form, contact details, social media links, and location map |
 
-*BSIS – 3C, Dr. Mary Joy Daniel Viñas (Instructor)*
+### Project Structure
+
+```text
+SMJ_Profaith_Printing_Services/
+├── .vercel/
+├── assets/
+│   ├── products/
+│   ├── service-rates/
+│   ├── InvitationCards.jpg
+│   ├── logo.png
+│   └── LogoCards.jpg
+├── css/
+│   ├── base.css
+│   ├── home.css
+│   ├── pages.css
+│   └── services.css
+├── about.html
+├── blog.html
+├── contact.html
+├── faqs.html
+├── index.html
+├── services.html
+├── script.js
+├── style.css
+├── README.md
+└── .gitignore
+```
+
+## Features
+
+- Responsive layout for desktop, tablet, and mobile devices
+- Hamburger navigation menu on smaller screens
+- Inquiry form with client-side validation for required fields, email format, and Philippine mobile number format
+- Scroll-reveal animations, with reduced-motion support
+- Semantic HTML5 elements such as `header`, `nav`, `main`, `section`, `article`, and `footer`
+- Embedded Google Map showing the shop's location
+- FAQ accordion for displaying frequently asked questions
+- Image lightbox for viewing the logo and featured work
+
+## Design Concept
+
+- **Color Scheme:** Pink, white, and black, based on the company's logo
+- **Typography:** Playfair Display and Times New Roman for headings; Roboto and Montserrat for navigation, labels, and buttons
+- **Design Principles:** Contrast, repetition, alignment, and proximity
+- **Layout:** Consistent page layouts and responsive elements for easier navigation across different screen sizes
+
+## Running Locally
+
+1. Open the project folder in **Visual Studio Code**.
+2. Install the recommended **Live Server** extension.
+3. Right-click `index.html` and select **Open with Live Server**.
+
+No build tools or additional installation are required. The website uses HTML, CSS, and JavaScript.
+
+## Deployment
+
+- **GitHub Repository:** https://github.com/sevajehaiabless06/SMJ-ProFaith_Printing-Services
+- **Live Site:** https://sevajehaiabless06.github.io/SMJ-ProFaith_Printing-Services/index.html
+
+The website is deployed using GitHub Pages.
+
+To deploy or update the website:
+
+1. Push the project files to the GitHub repository's `main` branch.
+2. Open the repository's **Settings**.
+3. Select **Pages**.
+4. Under **Build and deployment**, select the `main` branch and `/ (root)` folder as the source.
+5. Click **Save** and wait for GitHub Pages to publish the website.
+
+## Lessons Learned
+
+Through this project, the team gained experience in:
+
+- Collaborating and managing project files using Git and GitHub.
+- Developing a multi-page website using HTML, CSS, and JavaScript.
+- Applying responsive design to make the website accessible on different screen sizes.
+- Organizing business information into separate pages for easier navigation.
+- Deploying a website through GitHub Pages.
+
+## Timeline
+
+| Phase | Task | Date |
+|---|---|---|
+| Proposal | Project planning and initial presentation | September 30, 2026 |
+| Development | Website design, coding, and revisions | October–November 2026 |
+| Deployment | GitHub setup and website deployment | November 2026 |
+| Final Submission | Final documentation and presentation | November 23, 2026 |
 
 ## Notes for Maintenance
 
-- The inquiry form validates input in the browser only. To receive submissions by email, connect the form to a service such as Formspree or to a backend.
-- Shared colors are defined as variables at the top of `style.css`, so a brand color can be changed in one place.
+- The inquiry form validates visitor input in the browser only. It does not automatically send or store submissions. Customers can use the provided contact options to reach the business.
+- Shared colors are defined in `base.css` so the website's color scheme can be updated in one place.
+- The website is an informational front-end project and does not include a backend, database, online checkout, or automatic order management.
 
-## License
+---
 
-Created for academic purposes. Add a `LICENSE` file if the project will be published under an open-source license.
+**BSIS – 3C**  
+**Instructor:** Dr. Mary Joy Daniel Viñas
