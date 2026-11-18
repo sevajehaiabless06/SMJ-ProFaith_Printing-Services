@@ -8,6 +8,7 @@
    4. Inquiry form validation
    5. FAQ accordion
    6. Hero logo lightbox
+   7. Price list toggle
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setupInquiryForm();
     setupFaqAccordion();
     setupLogoLightbox();
-    setupFeaturedWorksLightbox();
     setupPriceListToggle();
 });
 
@@ -460,109 +460,7 @@ function setupLogoLightbox() {
 }
 
 /* ==========================================================================
-   7. FEATURED PRINTING WORKS LIGHTBOX
-   Opens featured printing images in a larger preview.
-   ========================================================================== */
-
-function setupFeaturedWorksLightbox() {
-    const imageButtons = document.querySelectorAll(
-        ".featured-image-button"
-    );
-
-    if (!imageButtons.length) return;
-
-    const lightbox = document.createElement("div");
-
-    lightbox.className = "featured-lightbox";
-    lightbox.setAttribute("aria-hidden", "true");
-
-    lightbox.innerHTML = `
-        <div
-            class="featured-lightbox-content"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Featured printing image preview"
-        >
-            <button
-                class="featured-lightbox-close"
-                type="button"
-                aria-label="Close image preview"
-            >
-                &times;
-            </button>
-
-            <img src="" alt="">
-        </div>
-    `;
-
-    document.body.appendChild(lightbox);
-
-    const previewImage = lightbox.querySelector("img");
-    const closeButton = lightbox.querySelector(
-        ".featured-lightbox-close"
-    );
-
-    let previouslyFocusedElement = null;
-
-    function openLightbox(button) {
-        const image = button.querySelector("img");
-
-        if (!image) return;
-
-        previouslyFocusedElement = button;
-
-        previewImage.src = image.src;
-        previewImage.alt = image.alt;
-
-        lightbox.classList.add("open");
-        lightbox.setAttribute("aria-hidden", "false");
-
-        document.body.style.overflow = "hidden";
-
-        closeButton.focus();
-    }
-
-    function closeLightbox() {
-        lightbox.classList.remove("open");
-        lightbox.setAttribute("aria-hidden", "true");
-
-        document.body.style.overflow = "";
-
-        previewImage.src = "";
-        previewImage.alt = "";
-
-        if (previouslyFocusedElement) {
-            previouslyFocusedElement.focus();
-        }
-    }
-
-    imageButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            openLightbox(button);
-        });
-    });
-
-    closeButton.addEventListener("click", closeLightbox);
-
-    lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-            closeLightbox();
-        }
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (
-            event.key === "Escape" &&
-            lightbox.classList.contains("open")
-        ) {
-            closeLightbox();
-        }
-    });
-}
-
-
-/* ==========================================================================
-   8. PRICE LIST TOGGLE
+   7. PRICE LIST TOGGLE
    Shows the first four price cards by default and toggles the rest.
    ========================================================================== */
 

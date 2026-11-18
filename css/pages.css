@@ -153,10 +153,6 @@
 .faq-contact p {
   color: var(--gray);
 }
-.featured-works {
-  background: var(--white);
-}
-
 .featured-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
