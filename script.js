@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupFaqAccordion();
     setupLogoLightbox();
     setupFeaturedWorksLightbox();
+    setupPriceListToggle();
 });
 
 
@@ -556,5 +557,41 @@ function setupFeaturedWorksLightbox() {
         ) {
             closeLightbox();
         }
+    });
+}
+
+
+/* ==========================================================================
+   8. PRICE LIST TOGGLE
+   Shows the first four price cards by default and toggles the rest.
+   ========================================================================== */
+
+function setupPriceListToggle() {
+    const grid = document.getElementById("rate-card-grid");
+    const toggle = document.getElementById("rate-list-toggle");
+
+    if (!grid || !toggle) return;
+
+    const cards = grid.querySelectorAll(".rate-card");
+
+    if (cards.length <= 4) {
+        toggle.hidden = true;
+        return;
+    }
+
+    const hiddenCards = Array.from(cards).slice(4);
+    hiddenCards.forEach((card) => {
+        card.classList.add("rate-card-hidden");
+    });
+
+    toggle.addEventListener("click", () => {
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+
+        hiddenCards.forEach((card) => {
+            card.classList.toggle("rate-card-hidden", isExpanded);
+        });
+
+        toggle.setAttribute("aria-expanded", String(!isExpanded));
+        toggle.textContent = isExpanded ? "See more" : "See less";
     });
 }
