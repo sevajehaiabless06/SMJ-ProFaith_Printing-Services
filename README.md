@@ -109,15 +109,7 @@ No build tools or additional installation are required. The website uses HTML, C
 - **GitHub Repository:** https://github.com/sevajehaiabless06/SMJ-ProFaith_Printing-Services
 - **Live Site:** https://sevajehaiabless06.github.io/SMJ-ProFaith_Printing-Services
 
-The website is deployed using GitHub Pages.
-
-To deploy or update the website:
-
-1. Push the project files to the GitHub repository's `main` branch.
-2. Open the repository's **Settings**.
-3. Select **Pages**.
-4. Under **Build and deployment**, select the `main` branch and `/ (root)` folder as the source.
-5. Click **Save** and wait for GitHub Pages to publish the website.
+The website is deployed using GitHub Pages from the `main` branch (root folder). Pushing changes to `main` updates the live site.
 
 ## Lessons Learned
 
