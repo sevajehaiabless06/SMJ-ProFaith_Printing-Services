@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-This website was developed by BSIS 3C students as part of their Web Development course. It presents the business information, products, services, updates, and contact details of SMJ Profaith Printing Services, a local printing business in Muntinlupa.
+This website was developed by BSIS 3C students as part of their Web Development course. It presents the business information, products, services, price lists, updates, and contact details of SMJ Profaith Printing Services, a local printing business in Tunasan, Muntinlupa.
 
 ## Purpose
 
-To provide SMJ Profaith Printing Services with an informational website where customers can easily view the business background, available products and services, announcements, frequently asked questions, and contact information. The website also serves as an additional platform that complements the business's existing communication channels.
+To provide SMJ Profaith Printing Services with an informational website where customers can easily view the business background, available products and services, price lists, announcements, frequently asked questions, and contact information. The website complements the business's existing walk-in and online communication channels (Facebook, Messenger, Instagram, and email).
 
 ## Team Members & Roles
 
@@ -22,7 +22,7 @@ To provide SMJ Profaith Printing Services with an informational website where cu
 
 - HTML
 - CSS
-- JavaScript 
+- JavaScript
 - Visual Studio Code
 - Git and GitHub
 - GitHub Pages
@@ -31,24 +31,25 @@ To provide SMJ Profaith Printing Services with an informational website where cu
 
 | File | Page | Contents |
 |---|---|---|
-| `index.html` | Home | Company introduction, services at a glance, reasons to choose the business, and highlights |
-| `about.html` | About Us | Company background, mission and vision, and objectives |
-| `services.html` | Products & Services | Printing products, service highlights, and four-step order process |
-| `blog.html` | Blog/Updates | Printing tips, promotions, and business announcements |
-| `faqs.html` | FAQs | Common customer questions and information about services, payment, and delivery or pickup |
-| `contact.html` | Contact Us | Inquiry form, contact details, social media links, and location map |
+| `index.html` | Home | Company introduction, services at a glance with a View Price Lists button, and reasons to choose the business |
+| `about.html` | About Us | Behind the business, mission and vision, and objectives |
+| `services.html` | Products & Services | Products, service highlights, four-step order process, and price lists |
+| `blog.html` | Blog/Updates | Printing tips, promotions and announcements, and community engagement |
+| `faqs.html` | FAQs | Common customer questions, service guidelines, and information about payment, pickup, and delivery |
+| `contact.html` | Contact Us | Inquiry form, contact details and business hours, social media links, and location map |
 
 ### Project Structure
 
 ```text
-SMJ_Profaith_Printing_Services/
-├── .vercel/
+SMJ-ProFaith_Printing-Services/
 ├── assets/
-│   ├── products/
-│   ├── service-rates/
-│   ├── InvitationCards.jpg
+│   ├── products/          # Product photos
+│   ├── service-rates/     # Price list images
+│   ├── fb-cover.jpg       # About Us cover image
 │   ├── logo.png
-│   └── LogoCards.jpg
+│   ├── services-1.jpg     # Our Services at a Glance photos
+│   ├── services-2.jpg
+│   └── services-3.jpg
 ├── css/
 │   ├── base.css
 │   ├── home.css
@@ -61,7 +62,6 @@ SMJ_Profaith_Printing_Services/
 ├── index.html
 ├── services.html
 ├── script.js
-├── style.css
 ├── README.md
 └── .gitignore
 ```
@@ -71,16 +71,28 @@ SMJ_Profaith_Printing_Services/
 - Responsive layout for desktop, tablet, and mobile devices
 - Hamburger navigation menu on smaller screens
 - Inquiry form with client-side validation for required fields, email format, and Philippine mobile number format
+- Price list gallery on the Products & Services page, with a "See more" button
+- View Price Lists button on the Home page that leads to the price lists
+- Business hours, contact details, and embedded Google Map on the Contact page
+- FAQ accordion for displaying frequently asked questions
+- Image lightbox for viewing the logo on the Home page
 - Scroll-reveal animations, with reduced-motion support
 - Semantic HTML5 elements such as `header`, `nav`, `main`, `section`, `article`, and `footer`
-- Embedded Google Map showing the shop's location
-- FAQ accordion for displaying frequently asked questions
-- Image lightbox for viewing the logo and featured work
 
 ## Design Concept
 
 - **Color Scheme:** Pink, white, and black, based on the company's logo
-- **Typography:** Playfair Display and Times New Roman for headings; Roboto and Montserrat for navigation, labels, and buttons
+
+  | Color | Hex | Use |
+  |---|---|---|
+  | Brand pink | `#f25c7a` | Page banners, buttons, and highlights |
+  | Dark pink | `#d43f60` | Hover states and emphasis |
+  | Soft pink | `#fde4ec` | Section backgrounds |
+  | White | `#ffffff` | Cards and content backgrounds |
+  | Black | `#111111` | Headings, body text, buttons, and footer |
+  | Gray | `#4a4a4a` | Secondary text |
+
+- **Typography:** Playfair Display for headings (Times New Roman as fallback); Montserrat and Roboto for navigation, labels, buttons, and body text
 - **Design Principles:** Contrast, repetition, alignment, and proximity
 - **Layout:** Consistent page layouts and responsive elements for easier navigation across different screen sizes
 
@@ -95,7 +107,7 @@ No build tools or additional installation are required. The website uses HTML, C
 ## Deployment
 
 - **GitHub Repository:** https://github.com/sevajehaiabless06/SMJ-ProFaith_Printing-Services
-- **Live Site:** https://sevajehaiabless06.github.io/SMJ-ProFaith_Printing-Services/index.html
+- **Live Site:** https://sevajehaiabless06.github.io/SMJ-ProFaith_Printing-Services
 
 The website is deployed using GitHub Pages.
 
@@ -129,10 +141,11 @@ Through this project, the team gained experience in:
 ## Notes for Maintenance
 
 - The inquiry form validates visitor input in the browser only. It does not automatically send or store submissions. Customers can use the provided contact options to reach the business.
-- Shared colors are defined in `base.css` so the website's color scheme can be updated in one place.
+- Payment, pickup, and delivery arrangements are not handled by the website. The FAQs page directs customers to contact the business directly.
+- Shared colors are defined in `css/base.css` so the website's color scheme can be updated in one place.
 - The website is an informational front-end project and does not include a backend, database, online checkout, or automatic order management.
 
 ---
 
-**BSIS – 3C**  
+**BSIS – 3C**
 **Instructor:** Dr. Mary Joy Daniel Viñas
