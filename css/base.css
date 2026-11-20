@@ -815,6 +815,30 @@ textarea {
     margin: 0;
 }
 
+.business-hours-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: #188038;
+    font-weight: 700;
+}
+
+.business-hours-status-icon {
+    display: inline-grid;
+    place-items: center;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    background: #188038;
+    color: var(--white);
+    border-radius: 50%;
+
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
 .social-links {
     list-style: none;
 }

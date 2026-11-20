@@ -225,6 +225,16 @@
    3. HOMEPAGE SERVICE PRICE-LIST GALLERY
    ========================================================================== */
 
+.service-highlight-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .rate-list-heading {
     margin: 3rem 0 1.5rem;
     text-align: center;

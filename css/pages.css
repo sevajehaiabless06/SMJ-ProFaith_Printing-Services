@@ -1,4 +1,11 @@
 /* Styles for the blog, FAQ, and general page-specific components. */
+
+.logo-panel .about-cover-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 /* ==========================================================================
    15. Blog / Updates
    ========================================================================== */
