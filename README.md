@@ -128,7 +128,7 @@ Through this project, the team gained experience in:
 | Proposal | Project planning and initial presentation | September 30, 2026 |
 | Development | Website design, coding, and revisions | October–November 2026 |
 | Deployment | GitHub setup and website deployment | November 2026 |
-| Final Submission | Final documentation and presentation | November 23, 2026 |
+| Final Submission | Final documentation and presentation | November 27, 2026 |
 
 ## Notes for Maintenance
 
