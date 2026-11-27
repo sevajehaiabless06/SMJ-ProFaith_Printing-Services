@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This website was developed by BSIS 3C students as part of their Web Development course. It presents the business information, products, services, price lists, updates, and contact details of SMJ Profaith Printing Services, a local printing business in Tunasan, Muntinlupa.
+This website was developed by us, BSIS students, as part of our Web Development course. It presents the business information, products, services, price lists, updates, and contact details of SMJ Profaith Printing Services, a local printing business located in Tunasan, Muntinlupa.
 
 ## Purpose
 
